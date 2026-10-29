@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\OrderModel; // Model import karein
+use App\Models\OrderModel;
 
 class OrdersController extends BaseController
 {
@@ -11,8 +11,8 @@ class OrdersController extends BaseController
         $model = new OrderModel();
         
         $data = [
-            'orders' => $model->getOrdersWithPayments(5), // 5 orders per page
-            'pager'  => $model->pager, // Pager instance view ko pass karein
+            'orders' => $model->getOrdersWithPayments(5), 
+            'pager'  => $model->pager, 
         ];
 
         return view('orders', $data);
